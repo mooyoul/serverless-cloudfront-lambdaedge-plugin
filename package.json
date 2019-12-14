@@ -1,0 +1,31 @@
+{
+  "name": "serverless-cloudfront-lambdaedge-plugin",
+  "version": "1.0.0",
+  "description": "A serverless plugin that injects actual Lambda Version ARN to LambdaAssociations in CloudFront CFN resource",
+  "main": "index.js",
+  "files": ["index.js"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mooyoul/serverless-cloudfront-lambdaedge-plugin.git"
+  },
+  "keywords": [
+    "serverless",
+    "serverless-plugin",
+    "aws",
+    "cloudfront",
+    "lambda",
+    "lambdaedge"
+  ],
+  "author": "MooYeol Prescott Lee <mooyoul@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mooyoul/serverless-cloudfront-lambdaedge-plugin/issues"
+  },
+  "homepage": "https://github.com/mooyoul/serverless-cloudfront-lambdaedge-plugin#readme",
+  "devDependencies": {
+    "@vingle/semantic-release-config": "1.0.3"
+  }
+}
