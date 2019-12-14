@@ -26,9 +26,9 @@ class ServerlessPlugin {
       if (functionVersionLogicalId) {
         association.LambdaFunctionARN = { Ref: functionVersionLogicalId };
 
-        this.log("Replaced LambdaFunctionAssociation.%s to %s", functionName, functionVersionLogicalId);
+        this.log('Replaced LambdaFunctionAssociation.%s to %s', functionName, functionVersionLogicalId);
       } else {
-        this.log("Could not found appropriate version of LambdaFunctionAssociation.%s. Skipping.", functionName);
+        this.log('Could not found appropriate version of LambdaFunctionAssociation.%s. Skipping.', functionName);
       }
     }
   }
@@ -39,7 +39,7 @@ class ServerlessPlugin {
     return Object.keys(resources).reduce((collection, key) => {
       const resource = resources[key];
 
-      if (resource.Type === "AWS::CloudFront::Distribution") {
+      if (resource.Type === 'AWS::CloudFront::Distribution') {
         const config = resource.Properties && resource.Properties.DistributionConfig;
         if (config) {
           const cacheBehaviors = [config.DefaultCacheBehavior, ...(config.CacheBehaviors || [])]
@@ -76,7 +76,7 @@ class ServerlessPlugin {
   }
 
   log(...args) {
-    const TAG = "[serverless-cloudfront-lambdaedge-plugin] ";
+    const TAG = '[serverless-cloudfront-lambdaedge-plugin]';
 
     if (typeof args[0] === 'string') {
       args[0] = `${TAG} ${args[0]}`;
