@@ -50,7 +50,7 @@ plugins:
 
 Just specify `LambdaFunctionARN` of LambdaFunctionAssociations to matching function name.
 
-For example, If you defined functions in serverless like below:
+Let's suppose that you've defined functions in `serverless.yml` like below:
 
 ```yaml
 functions:
@@ -68,7 +68,7 @@ functions:
     role: LambdaEdgeExecutionRole
 ```
 
-Specify `LambdaFunctionARN` block like below:
+Just Specify `LambdaFunctionARN` block like below:
 
 ```yaml
 CloudFrontDistribution:
@@ -79,13 +79,13 @@ DistributionConfig:
   DefaultCacheBehavior:
     LambdaFunctionAssociations:
       - EventType: origin-request
-        LambdaFunctionARN: WebOriginRequest
+        LambdaFunctionARN: WebOriginRequest # Specify matching function name
     # ... TRUNCATED ...
   CacheBehaviors:
     - PathPattern: "/api/*"
       LambdaFunctionAssociations:
         - EventType: origin-request
-          LambdaFunctionARN: APIOriginRequest
+          LambdaFunctionARN: APIOriginRequest # Specify matching function name
       # ... TRUNCATED ...
   # ... TRUNCATED ...
 ```
