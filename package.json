@@ -1,6 +1,6 @@
 {
   "name": "serverless-cloudfront-lambdaedge-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A serverless plugin that injects actual Lambda Version ARN to LambdaAssociations in CloudFront CFN resource",
   "main": "index.js",
   "files": [

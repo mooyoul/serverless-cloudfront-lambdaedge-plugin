@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/mooyoul/serverless-cloudfront-lambdaedge-plugin/compare/v1.0.2...v1.0.3) (2019-12-14)
+
+
+### Bug Fixes
+
+* **docs:** update README ([803574f](https://github.com/mooyoul/serverless-cloudfront-lambdaedge-plugin/commit/803574f439fca6cf56cc2e735c8c2ef7bedc4449))
+
 ## [1.0.2](https://github.com/mooyoul/serverless-cloudfront-lambdaedge-plugin/compare/v1.0.1...v1.0.2) (2019-12-14)
 
 
