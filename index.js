@@ -1,5 +1,7 @@
 'use strict';
 
+const util = require('util');
+
 class ServerlessPlugin {
   constructor(serverless, options) {
     this.serverless = serverless;
