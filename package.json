@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/mooyoul/serverless-cloudfront-lambdaedge-plugin#readme",
   "devDependencies": {
-    "@vingle/semantic-release-config": "1.0.4"
+    "@vingle/semantic-release-config": "1.0.5"
   }
 }
