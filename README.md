@@ -71,23 +71,25 @@ functions:
 Just Specify `LambdaFunctionARN` block like below:
 
 ```yaml
-CloudFrontDistribution:
-Type: AWS::CloudFront::Distribution
-Properties:
-DistributionConfig:
-  # ... TRUNCATED ...
-  DefaultCacheBehavior:
-    LambdaFunctionAssociations:
-      - EventType: origin-request
-        LambdaFunctionARN: WebOriginRequest # Specify matching function name
-    # ... TRUNCATED ...
-  CacheBehaviors:
-    - PathPattern: "/api/*"
-      LambdaFunctionAssociations:
-        - EventType: origin-request
-          LambdaFunctionARN: APIOriginRequest # Specify matching function name
-      # ... TRUNCATED ...
-  # ... TRUNCATED ...
+resources:
+  Resources:
+    CloudFrontDistribution:
+      Type: AWS::CloudFront::Distribution
+      Properties:
+        DistributionConfig:
+          # ... TRUNCATED ...
+          DefaultCacheBehavior:
+            LambdaFunctionAssociations:
+              - EventType: origin-request
+                LambdaFunctionARN: WebOriginRequest # Specify matching function name
+            # ... TRUNCATED ...
+          CacheBehaviors:
+            - PathPattern: "/api/*"
+              LambdaFunctionAssociations:
+                - EventType: origin-request
+                  LambdaFunctionARN: APIOriginRequest # Specify matching function name
+              # ... TRUNCATED ...
+          # ... TRUNCATED ...
 ```
  
 and then, deploy your stack. 
